@@ -1,1 +1,46 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="canvas.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery.min.js"></script>
+    <title>Marion Wallsten</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="main">
+        <div class="innermain">
+            <div class="title">
+                <h1>Marion Wallsten</h1>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <script>
+
+        $(".buttonyes").click(
+            function () {
+                $(".ohyes").show();
+                $(".yesno").hide();
+                $(".title").hide();
+            }
+        );
+        $(".buttonno").click(
+            function () {
+                $(".ohno").show();
+                $(".yesno").hide();
+                $(".title").hide();
+            }
+        );
+    </script>
+</body>
+
+</html>
