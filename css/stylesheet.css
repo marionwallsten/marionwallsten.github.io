@@ -3,12 +3,16 @@
     padding: 0;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     width: 100vw;
     height: 100vh;
+    position: absolute;
     font-family: sans-serif;
-    background-color: pink;
-
+    background-color: rgba(243, 218, 198, 255);
 }
 
 #main {
@@ -40,18 +44,70 @@ body {
     vertical-align: middle;
 }
 
+.navbar {
+    overflow: hidden;
+    background-color: rgba(151, 181, 176, 255);
+    position: fixed;
+    border-radius: 30% 60% 30% 50%;
+    /* Set the navbar to fixed position */
+    left: 7px;
+    top: 7px;
+    /* Position the navbar at the top of the page */
+    width: 20%;
+    /* Full width */
+    list-style: none;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: center;
+    display: block;
+    position: relative;
+    font-size: 2.5vw;
+    color: rgb(74, 41, 7);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: rgba(255, 197, 151, 255);
+    border-radius: 90% 90% 90% 50%;
+    width: 15vw;
+}
+
 
 h1 {
-    text-align: center;
+    /*text-align: center; */
+    top: 20%;
+    left: 30%;
+    position: absolute;
     color: rgb(74, 41, 7);
     font-size: 110px;
 }
 
-
-.transparent {
+.home {
+    /*text-align: center; */
+    top: 20%;
+    left: 30%;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    margin-left: 95px;
+    color: rgb(74, 41, 7);
+    font-size: 110px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.aboutMe {
+    background-color: rgba(255, 255, 255, 0.441);
+    color: wheat;
+    position: absolute;
+    width: 60%;
+    height: 70%;
+    float: right;
+    top: 270px;
+    margin-left: 30%;
+    text-align: left;
 }
