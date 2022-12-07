@@ -47,11 +47,11 @@ body {
 .navbar {
     overflow: hidden;
     background-color: rgba(151, 181, 176, 255);
-    position: fixed;
+    position: absolute;
     border-radius: 30% 60% 30% 50%;
     /* Set the navbar to fixed position */
-    left: 7px;
-    top: 7px;
+    left: 10px;
+    top: 8px;
     /* Position the navbar at the top of the page */
     width: 20%;
     /* Full width */
@@ -74,9 +74,7 @@ body {
 
 /* Change background on mouse-over */
 .navbar a:hover {
-    background: rgba(255, 197, 151, 255);
-    border-radius: 90% 90% 90% 50%;
-    width: 15vw;
+    transform: scale(1.2);
 }
 
 
@@ -86,13 +84,13 @@ h1 {
     left: 30%;
     position: absolute;
     color: rgb(74, 41, 7);
-    font-size: 110px;
+    font-size: 100px;
 }
 
 .home {
     /*text-align: center; */
-    top: 20%;
-    left: 30%;
+    top: 40%;
+    left: 25%;
     position: absolute;
     color: rgb(74, 41, 7);
     font-size: 110px;
@@ -102,12 +100,211 @@ h1 {
 
 .aboutMe {
     background-color: rgba(255, 255, 255, 0.441);
-    color: wheat;
+    color: rgb(74, 41, 7);
     position: absolute;
     width: 60%;
     height: 70%;
     float: right;
+    top: 260px;
+    margin-left: 25%;
+    text-align: left;
+}
+
+.aboutMeText {
+    line-height: 2;
+    font-family: sans-serif;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 2%;
+}
+
+.contactBubble {
+    background-color: rgba(255, 255, 255, 0.441);
+    color: rgb(74, 41, 7);
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    float: right;
     top: 270px;
     margin-left: 30%;
     text-align: left;
+}
+
+.contactText {
+    line-height: 2;
+    font-family: sans-serif;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 2%;
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: none !important;
+}
+
+.resumetitle {
+    top: 25%;
+    left: 35%;
+    position: absolute;
+    color: rgb(74, 41, 7);
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.resumepdf {
+    position: sticky;
+    width: 20%;
+    height: 15%;
+    top: 0%;
+    right: 0%;
+    float: right;
+    background-color: white;
+    border-radius: 0% 0% 0% 40%;
+
+}
+
+.pdftext {
+    margin: 10%;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.resumeAreaLeft,
+.resumeAreaRight {
+    background: transparent;
+    top: 400px;
+    height: 100%;
+    width: 43vw;
+    position: absolute;
+}
+
+.resumeAreaLeft {
+    float: left;
+    left: 5%;
+}
+
+.resumeAreaRight {
+    float: right;
+    right: 5%;
+}
+
+.resumeleft,
+.resumeright {
+    background-color: rgba(255, 255, 255, 0.441);
+    color: rgb(74, 41, 7);
+    position: relative;
+    width: 100%;
+    height: 35%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.resumeright {
+    margin-bottom: 20%;
+}
+
+.resumeleft {
+    margin-top: 30%;
+}
+
+.resumeheader,
+.underText {
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 100%;
+}
+
+.resumeheader {
+    font-weight: bolder;
+    font-size: 20px;
+    height: 20%;
+}
+
+.underText {
+    font-weight: bold;
+    opacity: 0.8;
+    font-size: 14.5px;
+    float: left;
+}
+
+.paragraph {
+    font-size: 14px;
+    padding: 3%;
+    overflow: hidden;
+}
+
+.content {
+    position: absolute;
+    top: 40%;
+    width: 2%;
+    height: 20%;
+
+}
+
+.content:before,
+.content:after {
+    content: "";
+    width: 15px;
+    height: 0;
+    left: 49.5vw;
+    background: linear-gradient(to right, #dd8341, #dd8341);
+    position: absolute;
+    animation-fill-mode: forwards;
+    top: 0;
+
+}
+
+.content:after {
+    top: 45%;
+    animation: linedown 3s forwards;
+}
+
+@keyframes linedown {
+    100% {
+        height: 100vh;
+    }
+}
+
+.plant {
+    position: absolute;
+    bottom: 0%;
+    width: 2%;
+    height: 2%
+}
+
+.plant:before,
+.plant:after {
+    width: 15px;
+    height: 0;
+    left: 70vw;
+    background: linear-gradient(to right, green, rgb(1, 96, 1));
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+.plant:after {
+    top: 70%;
+    animation: lineup 3s forwards;
+}
+
+@keyframes lineup {
+    0% {
+        height: 0vh;
+    }
+
+    25% {
+        height: 50vh;
+    }
+
+    100% {
+        height: 100vh;
+    }
 }
