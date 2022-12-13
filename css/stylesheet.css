@@ -12,7 +12,8 @@ body {
     height: 100vh;
     position: absolute;
     font-family: sans-serif;
-    background-color: rgba(243, 218, 198, 255);
+    background-image: url("../images/watercolor-design-pastel-background_23-2148481366.jpg");
+    background-repeat: no-repeat;
 }
 
 #main {
@@ -23,46 +24,61 @@ body {
     text-align: center;
     top: 0px;
     left: 0px;
+
 }
 
-
-.images {
-    float: left;
-    display: absolute;
-    height: 180px;
-    width: 180px;
-    padding: 10px;
-    justify-content: center;
-}
 
 .innermain {
-    display: table-cell;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: center;
+}
+
+.centerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: center;
+}
+
+.languageBubbles {
+    overflow: hidden;
+    background-color: transparent;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.languageBubblesElements {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    background-color: pink;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
 }
 
 .navbar {
     overflow: hidden;
-    background-color: rgba(151, 181, 176, 255);
-    position: absolute;
-    border-radius: 30% 60% 30% 50%;
-    /* Set the navbar to fixed position */
-    left: 10px;
-    top: 8px;
-    /* Position the navbar at the top of the page */
-    width: 20%;
-    /* Full width */
-    list-style: none;
+    flex-direction: row;
+    background-color: rgba(68, 64, 64, 0.115);
+    border-radius: 0 0 25px 25px;
+    width: fit-content;
+    justify-content: center;
+    display: flex;
+    position: sticky;
 }
 
 /* Links inside the navbar */
 .navbar a {
-    float: center;
-    display: block;
-    position: relative;
     font-size: 2.5vw;
     color: rgb(74, 41, 7);
-    text-align: center;
-    padding: 20px 16px;
+    padding: 20px;
     text-decoration: none;
     font-weight: bold;
     font-family: sans-serif;
@@ -73,56 +89,62 @@ body {
     transform: scale(1.2);
 }
 
-
 h1 {
-    /*text-align: center; */
-    top: 20%;
+    padding-top: 5%;
     left: 30%;
-    position: absolute;
     color: rgb(74, 41, 7);
     font-size: 100px;
 }
 
 .home {
-    /*text-align: center; */
-    top: 40%;
-    left: 25%;
-    position: absolute;
     color: rgb(74, 41, 7);
     font-size: 110px;
     font-weight: bold;
     font-family: sans-serif;
+    padding-top: 20vh;
+}
+
+.homeUnderText {
+    color: rgba(74, 40, 7, 0.509);
+    font-size: 70px;
+    font-weight: regular;
+    font-family: sans-serif;
 }
 
 .aboutMe {
-    background-color: rgba(255, 255, 255, 0.441);
+    background-color: rgba(242, 219, 201, 0.111);
     color: rgb(74, 41, 7);
-    position: absolute;
-    width: 60%;
-    height: 70%;
-    float: right;
-    top: 260px;
-    margin-left: 25%;
     text-align: left;
+    width: 55vw;
+    padding: 1%;
 }
 
 .aboutMeText {
     line-height: 2;
-    font-family: sans-serif;
-    padding-left: 6%;
-    padding-right: 6%;
-    padding-top: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    padding: 2%;
+}
+
+.listenPlaylist {
+    color: rgb(74, 41, 7);
+    font-family: caveat;
+    font-size: 20px;
+    transform: rotate(10deg);
+    position: absolute;
+    left: 5vw;
+    top: 25vh;
 }
 
 .contactBubble {
-    background-color: rgba(255, 255, 255, 0.441);
+    background-color: transparent;
     color: rgb(74, 41, 7);
     position: absolute;
-    width: 60%;
+    width: 50%;
     height: 40%;
-    float: right;
-    top: 270px;
-    margin-left: 30%;
+    float: left;
+    top: 290px;
+    margin-left: 25%;
     text-align: left;
 }
 
@@ -176,7 +198,7 @@ a:link {
 .resumeAreaLeft,
 .resumeAreaRight {
     background: transparent;
-    top: 400px;
+    padding-top: 5%;
     height: 100%;
     width: 43vw;
     position: absolute;
@@ -194,21 +216,20 @@ a:link {
 
 .resumeleft,
 .resumeright {
-    background-color: rgba(255, 255, 255, 0.441);
+    background-color: rgba(128, 128, 128, 0.099);
     color: rgb(74, 41, 7);
     position: relative;
     width: 100%;
-    height: 35%;
     text-align: left;
     overflow: hidden;
 }
 
 .resumeright {
-    margin-bottom: 20%;
+    margin-bottom: 15%;
 }
 
 .resumeleft {
-    margin-top: 30%;
+    margin-top: 15%;
 }
 
 .resumeheader,
@@ -227,22 +248,33 @@ a:link {
 .underText {
     font-weight: bold;
     opacity: 0.8;
-    font-size: 14.5px;
+    font-size: 15px;
     float: left;
 }
 
 .paragraph {
-    font-size: 14px;
+    font-size: 15px;
     padding: 3%;
     overflow: hidden;
+}
+
+.paragraph a {
+    text-decoration: underline;
+    color: rgb(74, 41, 7);
 }
 
 .content {
     position: absolute;
     top: 40%;
     width: 2%;
-    height: 20%;
+    height: 10%;
+}
 
+.playlist {
+    position: absolute;
+    float: left;
+    top: 34vh;
+    left: -10px;
 }
 
 .content:before,
@@ -251,7 +283,7 @@ a:link {
     width: 15px;
     height: 0;
     left: 49.5vw;
-    background: linear-gradient(to right, #dd8341, #dd8341);
+    background: linear-gradient(to right, rgb(74, 41, 7), rgb(74, 41, 7));
     position: absolute;
     animation-fill-mode: forwards;
     top: 0;
@@ -259,54 +291,100 @@ a:link {
 }
 
 .content:after {
-    top: 45%;
+    top: 100%;
     animation: linedown 3s forwards;
 }
 
 @keyframes linedown {
     100% {
-        height: 100vh;
+        height: 600px;
     }
 }
 
+@keyframes plant {
+    0% {
+        transform: rotate(0deg);
+    }
 
-.plant {
-    position: absolute;
-    bottom: 0%;
-    width: 2%;
-    height: 30%;
+    50% {
+        transform: rotate(-1deg);
+    }
 
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
-.plant:before,
-.plant:after {
-    content: "";
-    width: 10px;
-    height: 0;
-    left: 0;
-    background: linear-gradient(to right, rgb(10, 105, 10), rgb(10, 120, 10));
-    position: absolute;
-    animation-fill-mode: forwards;
-    top: 0%;
-}
+@keyframes leaf1 {
+    0% {
+        transform: translateX(0px) rotate(110deg);
+    }
 
-.plant:after {
-    bottom: 40%;
-    animation: lineup 3s forwards;
-}
-
-@keyframes lineup {
-    25% {
-        left: 80%;
-        right: 0%;
+    50% {
+        transform: translateX(-3px) rotate(110deg);
     }
 
     100% {
-        top: -200px;
-        height: 200px
+        transform: translateX(0px) rotate(110deg);
     }
 }
 
+@keyframes leaf5 {
+    0% {
+        transform: translateX(0px) rotate(110deg);
+    }
+
+    50% {
+        transform: translateX(-9px) rotate(110deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(110deg);
+    }
+}
+
+@keyframes leaf2 {
+    0% {
+        transform: translateX(0px) rotate(-20deg);
+    }
+
+    50% {
+        transform: translateX(-4px) rotate(-20deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(-20deg);
+    }
+}
+
+@keyframes leaf4 {
+    0% {
+        transform: translateX(0px) rotate(-20deg);
+    }
+
+    50% {
+        transform: translateX(-7px) rotate(-20deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(-20deg);
+    }
+}
+
+@keyframes leaf3 {
+    0% {
+        transform: translateX(0px) rotate(110deg);
+    }
+
+    50% {
+        transform: translateX(-6px) rotate(110deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(110deg);
+    }
+}
 
 .leaf1,
 .leaf2,
@@ -319,43 +397,56 @@ a:link {
     width: 4%;
     border-radius: 0 75px;
     float: right;
+
 }
 
 .leaf1 {
+    animation: leaf1 3.5s ease-in-out forwards infinite;
+    transform-origin: 20% 0 0 20%;
     transform: rotate(110deg);
     right: 5.2%;
     top: 80%;
 }
 
 .leaf2 {
+    animation: leaf2 3.5s ease-in-out forwards infinite;
+    transform-origin: 100% 0 0 100%;
     transform: rotate(-20deg);
     right: 10%;
     top: 70%;
 }
 
 .leaf3 {
+    animation: leaf3 3.5s ease-in-out forwards infinite;
+    transform-origin: 100% 0 0 100%;
     transform: rotate(110deg);
     right: 5.2%;
     top: 60%;
 }
 
 .leaf4 {
+    animation: leaf4 3.5s ease-in-out forwards infinite;
+    transform-origin: 100% 0 0 100%;
     transform: rotate(-20deg);
     right: 10%;
     top: 50%;
 }
 
 .leaf5 {
+    animation: leaf5 3.5s ease-in-out forwards infinite;
+    transform-origin: 100% 0 0 100%;
     transform: rotate(110deg);
     right: 5.2%;
-    top: 40%;
+    top: 41%;
 }
 
 .stem {
+    animation: plant 3.5s ease-in-out forwards infinite;
+    transform-origin: 0 100%;
     position: absolute;
     background-color: rgb(0, 98, 0);
-    height: 60%;
-    width: 0.7%;
+    height: 500px;
+    width: 10px;
     right: 9%;
     top: 45%;
     border-radius: 75px 0;

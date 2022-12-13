@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="canvas.js"></script>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38784102-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-38784102-1');
+    </script>
+    <script>
+        /**
+        * Function that tracks a click on an outbound link in Analytics.
+        * This function takes a valid URL string as an argument, and uses that URL string
+        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+        * using 'navigator.sendBeacon' in browser that support it.
+        */
+        var trackOutboundLink = function (url) {
+            gtag('event', 'click', {
+                'event_category': url,
+                'event_label': url,
+                'transport_type': 'beacon',
+                'event_callback': function () { document.location = url; }
+            });
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery.min.js"></script>
+    <title>Redo för julmusiken?</title>
+    <style>
+        @import url("https://fonts.adobe.com/fonts/bio-sans");
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 800px;
+            height: 235px;
+            font-family: sans-serif;
+            background-image: url("images/hpto-bakgrund-rosa.jpg");
+            background-repeat: no-repeat;
+
+        }
+
+        #main {
+            position: absolute;
+            display: table;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            width: 800px;
+            height: 235px;
+            top: 0px;
+            left: 0px;
+        }
+
+        #canvas {
+            display: flex;
+            position: relative;
+        }
+
+        .images {
+            float: left;
+            display: absolute;
+            height: 180px;
+            width: 180px;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .innermain {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .yesno {
+            position: absolute;
+            top: 100px;
+            left: 125px;
+            display: flex;
+            justify-content: center;
+            flex-basis: 0;
+            flex-grow: 1;
+            width: 550px;
+            margin: 0 auto;
+            font-size: 30px;
+        }
+
+        h1 {
+            position: absolute;
+            top: 15px;
+            left: 105px;
+            color: rgb(74, 41, 7);
+            margin-bottom: 20px;
+            font-size: 60px;
+        }
+
+        .buttonyes,
+        .buttonno {
+            border: none;
+            background: rgba(255, 255, 255, 0.5);
+            color: #fff;
+            font-weight: 100;
+            padding: 20px;
+            display: inline-block;
+            transition: all 0.3s ease 0s;
+            width: 100%
+        }
+
+        .buttonyes {
+            color: green;
+            border-radius: 6px 6px 6px 6px;
+            margin-right: 10px;
+            font-family: mayence-premium, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .buttonno {
+            color: red;
+            /* Red from ekollon on picture*/
+            border-radius: 6px 6px 6px 6px;
+            margin-left: 10px;
+            font-family: sans-serif;
+            font-weight: 600;
+            font-style: normal;
+
+        }
+
+        .ohyes img,
+        .ohno img {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .ohno {
+            font-family: sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .ohno p,
+        .ohyes p {
+            width: 470px;
+        }
+
+        .transparent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            margin-left: 95px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="main">
+        <div class="innermain">
+            <div class="title">
+                <h1>Redo för julmusiken?</h1>
+            </div>
+            <div class="yesno">
+                <div class="buttonyes">
+                    <h3>Ja, nu kör vi!</h3>
+                </div>
+                <div class="buttonno">
+                    <h3>Nej, inte än...</h3>
+                </div>
+            </div>
+            <div class="ohno" style="display:none;">
+                <div class="transparent">
+                    <div class="images">
+                        <a href="spotify:playlist:5jz4WS1hBQYW6AHPNBrGqb?si=ae5c203a29a84713"
+                            onclick="trackOutboundLink('spotify:playlist:5jz4WS1hBQYW6AHPNBrGqb?si=ae5c203a29a84713'); return false;">
+                            <img alt="EPA dunk spellista" src="images/EPA-DUNK-2022.jpg" width="180" height="180">
+                        </a>
+                    </div>
+                    <div class="images">
+                        <a href="spotify:playlist:2U1L2QAmERQC0XblVKvQeG?si=0b43a464469340ea"
+                            onclick="trackOutboundLink('spotify:playlist:2U1L2QAmERQC0XblVKvQeG?si=0b43a464469340ea'); return false;">
+                            <img alt="Svenska hits spellista" src="images/Svenska-Hits-2022-Veronica-Maggio.jpg"
+                                width="180" height="180">
+                        </a>
+                    </div>
+                    <div class="images">
+                        <a href="spotify:playlist:1UltEevqmtO7vKlPpVFcqB?si=5c44f3dcb45842a5"
+                            onclick="trackOutboundLink('spotify:playlist:1UltEevqmtO7vKlPpVFcqB?si=5c44f3dcb45842a5'); return false;">
+                            <img alt="Juicy spellista" src="images/Omslag-Juicy.png" width="180" height="180">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ohyes" style="display:none;">
+                <div class="transparent">
+                    <div class="images">
+                        <a href="spotify:playlist:29RjQXR7fAVioZgZwohIwo?si=3a658d61546a4ad8"
+                            onclick="trackOutboundLink('spotify:playlist:29RjQXR7fAVioZgZwohIwo?si=3a658d61546a4ad8'); return false;">
+                            <img alt="Julmusik spellista" src="images/Julmusik-2.5-paket-2022.jpg" width="180"
+                                height="180">
+                        </a>
+                    </div>
+                    <div class="images">
+                        <a href="spotify:playlist:2Dr8fnRrKF3slkcKJ1E38K?si=2da8adca70c747ac"
+                            onclick="trackOutboundLink('spotify:playlist:2Dr8fnRrKF3slkcKJ1E38K?si=2da8adca70c747ac'); return false;">
+                            <img alt="Svensk julmusik spellista" src="images/Svensk-Julmusik-2022.jpg" width="180"
+                                height="180">
+                        </a>
+                    </div>
+                    <div class="images">
+                        <a href="spotify:playlist:7wkNVPjc5xMsZK6LywXRAA?si=6a55c93626234ffb"
+                            onclick="trackOutboundLink('spotify:playlist:7wkNVPjc5xMsZK6LywXRAA?si=6a55c93626234ffb'); return false;">
+                            <img alt="Akustisk julmusik spellista" src="images/Akustisk-Jul-2022-.jpg" width="180"
+                                height="180">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <script>
+
+        $(".buttonyes").click(
+            function () {
+                $(".ohyes").show();
+                $(".yesno").hide();
+                $(".title").hide();
+            }
+        );
+        $(".buttonno").click(
+            function () {
+                $(".ohno").show();
+                $(".yesno").hide();
+                $(".title").hide();
+            }
+        );
+    </script>
+</body>
+
+</html>
