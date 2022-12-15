@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <script type="text/javascript" src="canvas.js"></script> -->
+
 
 <head>
     <meta charset="UTF-8">
@@ -10,12 +10,27 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 
 </head>
+<div class="parallax"></div>
 
 <body>
     <div id="main">
+        <div class="contactBubble">
+            <div class="contactText">
+                Contact me!
+            </div>
+            <div class="contactText">
+                <a href="mailto:marionwallsten@gmail.com"><img src="./images/1280px-Email_withcircle.svg.png"
+                        width="62px" height="62px"></a>
+                <a href="https://www.linkedin.com/in/marion-wallsten-1a5b4214b/"><img
+                        src="./images/LinkedIn_logo_initials.png " width="60px" height="60px"> </a>
+
+                <button type="button" class="collapsible"><img src="./images/590px-Phone-icon.svg.png" width="35px"
+                        height="60px"></button>
+                <div class="collapsibleContent">0700559908</div>
+            </div>
+        </div>
         <div class="centerMenu">
             <div class="navbar">
-                <a href="index.html">Home</a>
                 <a href="aboutMe.html">About me</a>
                 <a href="resume.html">Resume</a>
             </div>
@@ -64,10 +79,29 @@
         <div class="leaf4"></div>
         <div class="leaf5"></div>
         <div class="stem"></div>
+        <div class="pot-top"></div>
+        <div class="pot-top-shadow"></div>
+        <div class="pot-bot"></div>
     </div>
 
-    </div>
+
 
 </body>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </html>
