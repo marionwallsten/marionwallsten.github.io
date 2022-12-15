@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <script type="text/javascript" src="canvas.js"></script> -->
+<script type="text/javascript" src="/javascript/expandable.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -20,12 +20,26 @@
 
     </div> -->
     <div id="main">
+        <div class="contactBubble">
+            <div class="contactText">
+                Contact me!
+            </div>
+            <div class="contactText">
+                <a href="mailto:marionwallsten@gmail.com"><img src="./images/1280px-Email_withcircle.svg.png"
+                        width="62px" height="62px"></a>
+                <a href="https://www.linkedin.com/in/marion-wallsten-1a5b4214b/"><img
+                        src="./images/LinkedIn_logo_initials.png " width="60px" height="60px"> </a>
+
+                <button type="button" class="collapsible"><img src="./images/590px-Phone-icon.svg.png" width="35px"
+                        height="60px"></button>
+                <div class="collapsibleContent">0700559908</div>
+            </div>
+        </div>
         <div class="centerMenu">
             <div class="navbar">
                 <a href="index.html">Home</a>
                 <a href="aboutMe.html">About me</a>
                 <a href="resume.html">Resume</a>
-                <a href="contact.html">Contact</a>
             </div>
         </div>
 
@@ -42,8 +56,10 @@
                     Student union of Engineering and Science students at Uppsala University (UTN)
                 </div>
                 <div class="paragraph">
-                    During my second year at Uppsala University, I was responsible for updating and maintaining the
-                    student union's website and mobile application for new students. The application was built in React
+                    During my second year at Uppsala University, I was responsible for updating and
+                    maintaining the
+                    student union's website and mobile application for new students. The application was
+                    built in React
                     native and was launched on both IOS and android. This included updating all relevant
                     information and design on the website and on the application.
                 </div>
@@ -56,10 +72,12 @@
                     Uppsala University
                 </div>
                 <div class="paragraph">
-                    I am currently studying computer science at Uppsala University. Courses have focused on algorithms
+                    I am currently studying computer science at Uppsala University. Courses have focused on
+                    algorithms
                     and data
                     structures, operating systems, secure computer systems, process-, object- and imperative
-                    programming. But I have also studied courses in project management in software engineering, software
+                    programming. But I have also studied courses in project management in software
+                    engineering, software
                     design in larger projects, databases, system
                     design with a user perspective, and interaction design.
                 </div>
@@ -75,12 +93,15 @@
                     Student union of Engineering and Science students at Uppsala University (UTN)
                 </div>
                 <div class="paragraph">
-                    During the spring of 2022 I was responsible for updating and maintaining the website for the
-                    River Rafting event that is held each year in Uppsala. This included designing the website, and
-                    making relevant updates about the event. I was also responsible for maintaining the sign up system
+                    During the spring of 2022 I was responsible for updating and maintaining the website for
+                    the
+                    River Rafting event that is held each year in Uppsala. This included designing the
+                    website, and
+                    making relevant updates about the event. I was also responsible for maintaining the sign
+                    up system
                     for all
-                    of the student’s who wanted to participate in the river rafting. You can see the website <a
-                        href="https://forsranningen.utn.se/">here!</a>
+                    of the student’s who wanted to participate in the river rafting. You can see the website
+                    <a href="https://forsranningen.utn.se/">here!</a>
                 </div>
             </div>
             <div class="resumeright">
@@ -88,9 +109,11 @@
                     Spotify HPTO for Universal
                 </div>
                 <div class="underText">Universal music group</div>
-                <div class="paragraph">During the late fall of 2022 I was given the opportunity to make a Spotify
+                <div class="paragraph">During the late fall of 2022 I was given the opportunity to make a
+                    Spotify
                     Homepage
-                    Takeover for the Universal christmas campaign. I made a banner in HTML5, with some javascript
+                    Takeover for the Universal christmas campaign. I made a banner in HTML5, with some
+                    javascript
                     effects to promote some of their playlists! The finished product can be viewed <a
                         href="UniversalHPTO/index.html">here!</a>
                 </div>
@@ -101,16 +124,33 @@
                     Student
                 </div>
                 <div class="underText">Santa Monica college</div>
-                <div class="paragraph">From August 2018 to June 2019 I was a student at Santa Monica College. I didn't
+                <div class="paragraph">From August 2018 to June 2019 I was a student at Santa Monica
+                    College. I didn't
                     study a whole
                     programme, but took classes I found interesting. Some relevant are Frontend development,
                     Computer information systems and English!
                 </div>
             </div>
         </div>
-
     </div>
 
 </body>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </html>
