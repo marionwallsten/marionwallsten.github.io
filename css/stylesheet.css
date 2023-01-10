@@ -15,6 +15,14 @@ body {
 
 }
 
+@media only screen and (max-width: 600px) {
+    .parallax {
+        min-height: 220%;
+    }
+}
+
+
+
 .parallax {
     /* The image used */
     background-image: url("../images/watercolor-design-pastel-background_23-2148481366.jpg");
@@ -23,6 +31,8 @@ body {
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
+    perspective: 1px;
+    perspective-origin: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -43,6 +53,8 @@ body {
     overflow-y: auto;
 }
 
+
+
 #main {
     position: absolute;
     display: flex;
@@ -57,13 +69,20 @@ body {
 }
 
 .innermain {
-    display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
     float: center;
     height: 90vh;
 }
+
+@media only screen and (min-width: 600px) {
+    .innermain {
+        display: flex;
+    }
+}
+
 
 .centerMenu {
     display: flex;
@@ -76,7 +95,7 @@ body {
 .languageBubbles {
     overflow: hidden;
     background-color: transparent;
-    width: 900px;
+    width: 70vw;
     justify-content: center;
     align-items: center;
 }
@@ -90,6 +109,18 @@ body {
     color: black;
     font-size: 20px;
     font-family: sans-serif;
+}
+
+@media only screen and (max-width: 900px) {
+    .languageBubblesElements {
+        font-size: 12px;
+        padding: 6px;
+        margin: 4px;
+    }
+
+    .languageBubbles {
+        width: 90vw;
+    }
 }
 
 .navbar {
@@ -112,30 +143,37 @@ body {
     font-family: sans-serif;
 }
 
+@media only screen and (max-width: 600px) {
+    .navbar a {
+        padding: 7vw;
+        font-size: 5vw;
+    }
+}
+
 /* Change background on mouse-over */
 .navbar a:hover {
     transform: scale(1.2);
 }
 
 h1 {
-    padding-top: 5%;
-    left: 30%;
     color: rgb(74, 41, 7);
-    font-size: 100px;
-    position: static;
-}
-
-.home {
-    color: rgb(74, 41, 7);
-    font-size: 110px;
+    font-size: 8vw;
     font-weight: bold;
     font-family: sans-serif;
+    margin-top: 10vh;
+}
 
+@media only screen and (max-width: 600px) {
+
+    h1 {
+        margin-top: 20vh;
+        font-size: 11vw;
+    }
 }
 
 .homeUnderText {
     color: rgba(74, 40, 7, 0.509);
-    font-size: 70px;
+    font-size: 6vw;
     font-weight: regular;
     font-family: sans-serif;
 }
@@ -153,6 +191,13 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: inline-block;
     padding: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutMe {
+        width: 100%;
+        margin-top: 20%;
+    }
 }
 
 .listenPlaylist {
@@ -198,6 +243,13 @@ h1 {
     text-align: left;
 }
 
+@media only screen and (max-width: 600px) {
+
+    .resumetitle {
+        font-size: 12vw;
+    }
+}
+
 
 a:link {
     text-decoration: none;
@@ -211,7 +263,13 @@ a:link {
     width: 80%;
     padding: 30px;
     max-width: 2000px;
+}
 
+@media only screen and (max-width: 600px) {
+
+    .resume {
+        display: none;
+    }
 }
 
 .resumeArea {
@@ -254,6 +312,29 @@ a:link {
 
 .lastresumeright {
     margin-bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .phoneresume {
+        display: none !important;
+    }
+}
+
+.phoneresume {
+
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    text-align: left;
+    gap: 11px;
+}
+
+.phoneresumepods {
+    background-color: rgba(128, 128, 128, 0.099);
+    text-align: left;
+    padding: 4px;
+    width: 97%;
+    float: center;
 }
 
 .resumeheader,
@@ -497,6 +578,31 @@ a:link {
     right: 6.7%;
     z-index: 5;
 
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .pot-bot,
+    .pot-top,
+    .pot-top-shadow,
+    .leaf1,
+    .leaf2,
+    .leaf3,
+    .leaf4,
+    .leaf5,
+    .stem,
+    .playlist,
+    .listenPlaylist,
+    .content,
+    .contactBubble {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contactBubble {
+        display: none;
+    }
 }
 
 .pot-top-shadow {
