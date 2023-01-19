@@ -15,9 +15,15 @@ body {
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .parallax {
-        min-height: 220%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .parallax2 {
+        min-height: auto;
     }
 }
 
@@ -27,7 +33,7 @@ body {
     /* The image used */
     background-image: url("../images/watercolor-design-pastel-background_23-2148481366.jpg");
     /* Set a specific height */
-    min-height: 110%;
+    min-height: 120%;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -70,7 +76,6 @@ body {
 }
 
 .innermain {
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -78,7 +83,7 @@ body {
     height: 90vh;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
     .innermain {
         display: flex;
     }
@@ -144,7 +149,7 @@ body {
     font-family: sans-serif;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .navbar a {
         padding: 7vw;
         font-size: 5vw;
@@ -161,10 +166,21 @@ h1 {
     font-size: 8vw;
     font-weight: bold;
     font-family: sans-serif;
-    margin-top: 10vh;
+    margin-top: 15vh;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 1070px) {
+
+    h1 {
+        font-size: 140px;
+    }
+
+    .homeUnderText {
+        font-size: 90px !important;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
 
     h1 {
         margin-top: 20vh;
@@ -183,31 +199,36 @@ h1 {
     background-color: rgba(239, 239, 239, 0.474);
     color: rgb(74, 41, 7);
     text-align: left;
-    width: 55vw;
-    padding: 1%;
+    width: 70vw;
+
 }
 
 .aboutMeText {
     line-height: 2;
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: inline-block;
-    padding: 1%;
+    padding: 2%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+    .aboutMe {
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
     .aboutMe {
         width: 100%;
-        margin-top: 20%;
     }
 }
 
 .listenPlaylist {
     color: rgb(74, 41, 7);
     font-family: caveat;
-    font-size: 20px;
+    font-size: 22px;
     position: absolute;
-    left: 1vw;
-    top: 35vh;
+    right: 1.7vw;
+    top: 15vh;
 }
 
 .contactBubble {
@@ -221,7 +242,6 @@ h1 {
     font-family: sans-serif;
     font-weight: bold;
     text-align: center;
-
 }
 
 .contactText {
@@ -244,7 +264,7 @@ h1 {
     text-align: left;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     .resumetitle {
         font-size: 12vw;
@@ -377,9 +397,9 @@ a:link {
 
 .playlist {
     position: absolute;
-    float: left;
-    top: 40vh;
-    left: -10px;
+    float: right;
+    top: 3vh;
+    right: 10px;
 }
 
 .content:before,
@@ -405,6 +425,8 @@ a:link {
         max-height: 950px;
     }
 }
+
+/*
 
 @keyframes plant {
     0% {
@@ -614,6 +636,17 @@ a:link {
     top: 93.5%;
     right: 6.5%;
     z-index: 10;
+
+} */
+
+@media only screen and (max-width: 1300px) {
+
+    .playlist,
+    .listenPlaylist,
+    .content,
+    .contactBubble {
+        display: none;
+    }
 
 }
 
