@@ -1,7 +1,10 @@
+@import url('/https://fonts.google.com/specimen/Caveat');
+
 * {
     margin: 0;
     padding: 0;
 }
+
 
 html {
     overflow-y: scroll;
@@ -12,7 +15,7 @@ body {
     height: 100vh;
     position: absolute;
     font-family: sans-serif;
-
+    overflow-x: hidden;
 }
 
 @media only screen and (max-width: 800px) {
@@ -61,7 +64,6 @@ body {
 }
 
 
-
 #main {
     position: absolute;
     display: flex;
@@ -102,6 +104,7 @@ body {
     overflow: hidden;
     background-color: transparent;
     width: 70vw;
+    max-width: 950px;
     justify-content: center;
     align-items: center;
 }
@@ -224,11 +227,11 @@ h1 {
 
 .listenPlaylist {
     color: rgb(74, 41, 7);
-    font-family: caveat;
+    font-family: 'Caveat', cursive;
     font-size: 22px;
     position: absolute;
     right: 1.7vw;
-    top: 15vh;
+    top: 14vh;
 }
 
 .contactBubble {
@@ -399,7 +402,7 @@ a:link {
     position: absolute;
     float: right;
     top: 3vh;
-    right: 10px;
+    right: 1vw;
 }
 
 .content:before,
