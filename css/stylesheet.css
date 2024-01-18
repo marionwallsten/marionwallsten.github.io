@@ -12,7 +12,7 @@ html {
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     position: absolute;
     font-family: sans-serif;
     overflow-x: hidden;
@@ -34,7 +34,7 @@ body {
 /* About Me page, making image stay when scrolling */
 .parallax {
     /* The image used */
-    background-image: url("../images/watercolor-design-pastel-background_23-2148481366.jpg");
+    background-color: rgb(247, 235, 194);
     /* Set a specific height */
     min-height: 150%;
     /* Create the parallax scrolling effect */
@@ -50,7 +50,7 @@ body {
 /* Resume page, making image stay when scrolling */
 .parallax2 {
     /* The image used */
-    background-image: url("../images/watercolor-design-pastel-background_23-2148481366.jpg");
+    background-color: rgb(247, 235, 194);
     /* Set a specific height */
     height: 270%;
     /* Create the parallax scrolling effect */
@@ -114,10 +114,11 @@ body {
     margin: 10px;
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
-    background-color: pink;
+    background-color: rgba(255, 245, 208, 0.577);
     color: black;
     font-size: 20px;
     font-family: sans-serif;
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -136,7 +137,7 @@ body {
     overflow: hidden;
     flex-direction: row;
     background-color: rgba(68, 64, 64, 0.115);
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 15px 15px;
     width: fit-content;
     justify-content: center;
     display: flex;
@@ -161,25 +162,25 @@ body {
 
 /* Change background on mouse-over */
 .navbar a:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 h1 {
     color: rgb(74, 41, 7);
-    font-size: 8vw;
+    font-size: 4vw;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: monospace;
     margin-top: 15vh;
 }
 
 @media only screen and (min-width: 1070px) {
 
     h1 {
-        font-size: 140px;
+        font-size: 70px;
     }
 
     .homeUnderText {
-        font-size: 90px !important;
+        font-size: 50px !important;
     }
 }
 
@@ -193,13 +194,13 @@ h1 {
 
 .homeUnderText {
     color: rgba(74, 40, 7, 0.509);
-    font-size: 6vw;
+    font-size: 4vw;
     font-weight: regular;
-    font-family: sans-serif;
+    font-family: monospace;
 }
 
 .aboutMe {
-    background-color: rgba(239, 239, 239, 0.474);
+    background-color: rgba(255, 244, 203);
     color: rgb(74, 41, 7);
     text-align: left;
     width: 70vw;
@@ -225,14 +226,6 @@ h1 {
     }
 }
 
-.listenPlaylist {
-    color: rgb(74, 41, 7);
-    font-family: 'Caveat', cursive;
-    font-size: 22px;
-    position: absolute;
-    right: 1.7vw;
-    top: 14vh;
-}
 
 .contactBubble {
     background-color: transparent;
@@ -265,6 +258,12 @@ h1 {
     font-size: 80px;
     font-weight: bold;
     text-align: left;
+    float: left;
+}
+
+.resumeTitleArea {
+    text-align: left;
+    width: 80%;
 }
 
 @media only screen and (max-width: 700px) {
@@ -281,7 +280,7 @@ a:link {
 }
 
 .resume {
-    background-color: rgba(255, 255, 255, 0.465);
+    background-color: rgb(255, 244, 203);
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -302,41 +301,22 @@ a:link {
     gap: 5%;
 }
 
-.resumeAreaLeft,
-.resumeAreaRight {
+.innerResumeArea {
     background: transparent;
-    flex: 50%;
+    flex: 100%;
+    padding: 0%;
+    float: center;
 }
 
-.resumeAreaLeft {
-    float: left;
-}
 
-.resumeAreaRight {
-    float: right;
-}
-
-.resumeleft,
-.resumeright,
-.lastresumeright {
+.resumePods {
     background-color: rgba(128, 128, 128, 0.099);
-    color: rgb(74, 41, 7);
-    position: relative;
     text-align: left;
-    overflow: hidden;
+    padding: 4px;
+    width: 97%;
+    margin: 1%;
 }
 
-.resumeright {
-    margin-bottom: 18%;
-}
-
-.resumeleft {
-    margin-top: 25%;
-}
-
-.lastresumeright {
-    margin-bottom: 0;
-}
 
 @media only screen and (min-width: 600px) {
     .phoneresume {
@@ -398,13 +378,7 @@ a:link {
     position: absolute;
 }
 
-.playlist {
-    position: absolute;
-    float: right;
-    top: 3vh;
-    right: 1vw;
-}
-
+/*
 .content:before,
 .content:after {
     content: "";
@@ -428,224 +402,10 @@ a:link {
         max-height: 950px;
     }
 }
-
-/*
-
-@keyframes plant {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(-1.2deg);
-    }
-
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes leaf1 {
-    0% {
-        transform: translateX(0px) rotate(110deg);
-    }
-
-    50% {
-        transform: translateX(-3px) rotate(110deg);
-    }
-
-    100% {
-        transform: translateX(0px) rotate(110deg);
-    }
-}
-
-@keyframes leaf5 {
-    0% {
-        transform: translateX(0px) rotate(110deg);
-    }
-
-    50% {
-        transform: translateX(-9px) rotate(110deg);
-    }
-
-    100% {
-        transform: translateX(0px) rotate(110deg);
-    }
-}
-
-@keyframes leaf2 {
-    0% {
-        transform: translateX(0px) rotate(-20deg);
-    }
-
-    50% {
-        transform: translateX(-4px) rotate(-20deg);
-    }
-
-    100% {
-        transform: translateX(0px) rotate(-20deg);
-    }
-}
-
-@keyframes leaf4 {
-    0% {
-        transform: translateX(0px) rotate(-20deg);
-    }
-
-    50% {
-        transform: translateX(-7px) rotate(-20deg);
-    }
-
-    100% {
-        transform: translateX(0px) rotate(-20deg);
-    }
-}
-
-@keyframes leaf3 {
-    0% {
-        transform: translateX(0px) rotate(110deg);
-    }
-
-    50% {
-        transform: translateX(-6px) rotate(110deg);
-    }
-
-    100% {
-        transform: translateX(0px) rotate(110deg);
-    }
-}
-
-.leaf1,
-.leaf2,
-.leaf3,
-.leaf4,
-.leaf5 {
-    position: absolute;
-    background-color: rgb(0, 98, 0);
-    height: 5%;
-    width: 4%;
-    border-radius: 0 75px;
-    float: right;
-
-}
-
-.leaf1 {
-    animation: leaf1 3.5s ease-in-out forwards infinite;
-    transform-origin: 20% 0 0 20%;
-    transform: rotate(110deg);
-    right: 5.2%;
-    top: 80%;
-}
-
-.leaf2 {
-    animation: leaf2 3.5s ease-in-out forwards infinite;
-    transform-origin: 100% 0 0 100%;
-    transform: rotate(-20deg);
-    right: 9.5%;
-    top: 70%;
-}
-
-.leaf3 {
-    animation: leaf3 3.5s ease-in-out forwards infinite;
-    transform-origin: 100% 0 0 100%;
-    transform: rotate(110deg);
-    right: 5.2%;
-    top: 60%;
-}
-
-.leaf4 {
-    animation: leaf4 3.5s ease-in-out forwards infinite;
-    transform-origin: 100% 0 0 100%;
-    transform: rotate(-20deg);
-    right: 9.5%;
-    top: 50%;
-}
-
-.leaf5 {
-    animation: leaf5 3.5s ease-in-out forwards infinite;
-    transform-origin: 100% 0 0 100%;
-    transform: rotate(110deg);
-    right: 5.2%;
-    top: 41%;
-}
-
-.stem {
-    animation: plant 3.5s ease-in-out forwards infinite;
-    transform-origin: 0 100%;
-    position: absolute;
-    background-color: rgb(0, 98, 0);
-    height: 50%;
-    width: 0.6%;
-    right: 9%;
-    top: 45%;
-    border-radius: 75px 0;
-}
-
-.pot-top {
-    width: 7%;
-    height: 2.5%;
-    background-color: #FF7043;
-    top: 91%;
-    right: 5.8%;
-    position: absolute;
-}
-
-.pot-bot {
-    width: 3.5%;
-    height: 0px;
-    position: absolute;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 55px solid #FF7043;
-    bottom: 0%;
-    right: 6.7%;
-    z-index: 5;
-
-}
+*/
 
 @media only screen and (max-width: 1300px) {
 
-    .pot-bot,
-    .pot-top,
-    .pot-top-shadow,
-    .leaf1,
-    .leaf2,
-    .leaf3,
-    .leaf4,
-    .leaf5,
-    .stem,
-    .playlist,
-    .listenPlaylist,
-    .content,
-    .contactBubble {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .contactBubble {
-        display: none;
-    }
-}
-
-.pot-top-shadow {
-    width: 5.1%;
-    height: 0px;
-    position: absolute;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 12px solid #F4511E;
-    top: 93.5%;
-    right: 6.5%;
-    z-index: 10;
-
-} */
-
-@media only screen and (max-width: 1300px) {
-
-    .playlist,
-    .listenPlaylist,
     .content,
     .contactBubble {
         display: none;
